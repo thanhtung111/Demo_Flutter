@@ -1,7 +1,7 @@
-import 'package:demo_flutter/src/bloc/login_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../bloc/login_bloc.dart';
 import 'home.dart';
 
 void main() {
@@ -123,13 +123,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       GestureDetector(
                         onTap: onToggleShowPass,
-                        //child: Padding(
-                          //padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
-                          child: Text(
-                            _showPass ? 'Hide' : 'Show',
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        //),
+                        child: Text(
+                          _showPass ? 'Hide' : 'Show',
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
                     ],
                   ),
@@ -180,7 +177,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void onSignInClicked() {
     if (_loginBloc.isValidInfo(_txtUser.text, _txtPass.text)) {
-      Navigator.push( context, MaterialPageRoute(builder: (context) => MyHome()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => MyHome()));
     }
     // setState(() {
     //   if (_txtUser.text.length < 3) {
