@@ -1,6 +1,8 @@
-import 'package:demo_flutter/src/resources/login.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'resources/login.dart';
 
 void main() {
   runApp(MyApp());
